@@ -1,0 +1,7 @@
+---
+import { contacts } from '../data/site.js';
+---
+<!-- TODO: confirm these contact details for the new site. -->
+<ul class="contacts">
+  {contacts.map((contact) => <li><a href={contact.href}>{contact.label}</a></li>)}
+</ul>

@@ -1,0 +1,71 @@
+---
+import { nav, contacts, socials } from '../data/site.js';
+import '@fontsource/pt-sans/400.css';
+import '@fontsource/pt-sans/700.css';
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+const fullTitle = title ? `${title} — Библиотека, Эдинбург` : 'Библиотека — занятия для детей на русском языке в Эдинбурге';
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="/logo.jpg" type="image/jpeg">
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <ul class="socials">
+        {socials.map((social) => {
+          const icon = <svg viewBox="0 0 24 24" aria-hidden="true"><path d={social.path} /></svg>;
+          return (
+            <li>
+              {social.href
+                ? <a class="social" href={social.href} aria-label={social.label}>{icon}</a>
+                : <span class="social" role="img" aria-label={`${social.label} — скоро`} title={`${social.label} — скоро`}>{icon}</span>}
+            </li>
+          );
+        })}
+      </ul>
+      <p>Эдинбург, Великобритания</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <!-- TODO: confirm the business name. The logo says "БЫ lingvo"; the page text says "Библиотека". -->
+      <a class="brand" href="/"><img src="/logo.jpg" alt="БЫ lingvo — на главную" width="150" height="150"></a>
+      <nav aria-label="Разделы сайта">
+        {nav.map((item) => (
+          <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.label}</a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <p>Библиотека, Эдинбург</p>
+      <nav aria-label="Разделы сайта в подвале">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+      <div class="footer-contacts">
+        {contacts.map((contact) => <a href={contact.href}>{contact.label}</a>)}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

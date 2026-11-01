@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import Placeholder from '../components/Placeholder.astro';
+import { groups, holidayNote } from '../data/classes.js';
+---
+<Base title="Расписание" description="Расписание занятий на русском языке для детей и подростков в Эдинбурге.">
+  <div class="page-head">
+    <div class="wrap">
+      <h1>Расписание</h1>
+      <p class="lead">Дни и время занятий по группам.</p>
+    </div>
+  </div>
+
+  <section id="timetable">
+    <div class="wrap">
+      <h2>Занятия</h2>
+      <!-- TODO: add the real days and times, or replace these tables with a Google Calendar embed. -->
+      <div>
+        {groups.map((group) => (
+          <table class="timetable">
+            <caption>{group.age}</caption>
+            <thead>
+              <tr><th scope="col">Занятие</th><th scope="col">Длительность</th><th scope="col">День и время</th></tr>
+            </thead>
+            <tbody>
+              {group.classes.map((item) => (
+                <tr>
+                  <td>{item.name}</td>
+                  <td>{item.duration}</td>
+                  <td class={item.when ? undefined : 'pending'}>{item.when ?? 'Уточняется'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="place">
+    <div class="wrap">
+      <h2>Место</h2>
+      <!-- TODO: add the venue address. -->
+      <div>
+        <Placeholder>Адрес появится здесь. Пока уточняйте его у нас: <a href="/o-nas/#contacts">контакты</a>.</Placeholder>
+      </div>
+    </div>
+  </section>
+
+  <section id="holidays">
+    <div class="wrap">
+      <h2>Каникулы</h2>
+      <div>
+        <p class="note">{holidayNote}</p>
+      </div>
+    </div>
+  </section>
+</Base>
