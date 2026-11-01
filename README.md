@@ -23,7 +23,8 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 - The Cloudflare account is created, and the project is a Workers project.
 - Cloudflare copied this repo into a separate repo, `biblioteka-portal` (hyphen), and builds from that copy. Reconnect the project to this repo, `biblioteka_portal` (underscore), in the Cloudflare dashboard.
 - Cloudflare's first deploy failed because that copy has no site files ("Could not detect a directory containing static files").
-- A simple one-page version is in `public/index.html` (plain HTML, no build step). It has not been deployed, and it still has `TODO:` items for the name, logo, schedule and contact details.
+- A simple one-page version is in `public/index.html` (plain HTML, no build step). It has been deployed once from `main`, and it still has `TODO:` items for the name, classes, schedule and contact details.
+- The logo is the БЫ lingvo logo, saved as `public/logo.jpg` (original in `figures_archive/logos/`). It is only 150x150px, so it is shown small.
 
 ## Planned free services
 - Schedule display: embedded Google Calendar
@@ -54,7 +55,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 6. If the old site has a custom domain, redirect its URLs to the new pages to help keep search rankings. A `tilda.ws` address can't be redirected from Cloudflare, so otherwise add a link to the new site on the old one before cancelling.
 
 ## Questions to answer before building the site
-- Is Biblioteka (@biblioteka_edinburgh) the same business as the Tilda site's Студия "БЫ lingvo" (https://bylingvo.tilda.ws/, @bylingvo)? Which name, logo and Instagram does the new site use?
+- Is Biblioteka (@biblioteka_edinburgh) the same business as the Tilda site's Студия "БЫ lingvo" (https://bylingvo.tilda.ws/, @bylingvo)? The site now uses the БЫ lingvo logo, but its text says "Библиотека" and it links to @biblioteka_edinburgh. Which name and Instagram does the new site use?
 - What are the schedule's days, times and venue? The Tilda site does not list them.
 - How do parents sign up: WhatsApp, Telegram and email links, or the existing Google Form? The form collects child and parent details, so keeping it means moving the privacy policy too.
 - Should the site show prices?
