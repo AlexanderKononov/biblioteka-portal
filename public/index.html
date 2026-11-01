@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Библиотека — занятия для детей на русском языке в Эдинбурге</title>
+  <meta name="description" content="Поддержка и развитие русского языка через хобби, интересные занятия и общение. Группы для детей от 1 до 16 лет в Эдинбурге.">
+  <meta property="og:title" content="Библиотека — занятия для детей на русском языке в Эдинбурге">
+  <meta property="og:description" content="Поддержка и развитие русского языка через хобби, интересные занятия и общение. Группы для детей от 1 до 16 лет в Эдинбурге.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5c4a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='21' text-anchor='middle' fill='%23fbf7ec'%3EБ%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #fbf7ec;
+      --card: #ffffff;
+      --ink: #23302b;
+      --muted: #56635d;
+      --line: #e2d9c3;
+      --green: #1f5c4a;
+      --rust: #a8431f;
+      --blue: #27476e;
+      --plum: #7a3b69;
+      --ochre: #80620f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    h2 { font-size: clamp(1.75rem, 5vw, 2.25rem); margin-bottom: 1.25rem; }
+    h3 { font-size: 1.25rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--green); }
+    a:focus-visible { outline: 3px solid var(--rust); outline-offset: 2px; }
+
+    .wrap { max-width: 60rem; margin: 0 auto; padding: 0 1rem; }
+
+    .topbar { border-bottom: 1px solid var(--line); }
+    .topbar .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: .25rem 1.5rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+    .brand {
+      color: var(--ink);
+      font: 700 1.3rem Georgia, "Times New Roman", serif;
+      text-decoration: none;
+    }
+    .topbar nav { display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+    .topbar nav a { color: var(--muted); font-size: .975rem; text-decoration: none; }
+    .topbar nav a:hover { color: var(--green); text-decoration: underline; }
+
+    .hero { padding: 3rem 0 0; }
+    .hero h1 { font-size: clamp(2.25rem, 8vw, 3.75rem); margin-bottom: 1rem; max-width: 16ch; }
+    .hero .lead { font-size: 1.2rem; max-width: 40rem; color: var(--muted); }
+
+    .button {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .7rem 1.4rem;
+      border-radius: .4rem;
+      background: var(--green);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .button:hover { background: #17463a; }
+
+    .shelf {
+      display: flex;
+      align-items: flex-end;
+      gap: .3rem;
+      margin: 2.5rem 0 0;
+      padding: 0 .5rem;
+      list-style: none;
+      border-bottom: .6rem solid var(--ink);
+    }
+    .shelf li {
+      flex: 1 1 0;
+      max-width: 5.5rem;
+      padding: .9rem 0;
+      border-radius: .25rem .25rem 0 0;
+      color: #fff;
+      font: 700 1.05rem Georgia, "Times New Roman", serif;
+      letter-spacing: .03em;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      transform-origin: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .shelf li:nth-child(1) { background: var(--green); height: 10.5rem; }
+    .shelf li:nth-child(2) { background: var(--rust); height: 8.5rem; }
+    .shelf li:nth-child(3) { background: var(--blue); height: 9.5rem; }
+    .shelf li:nth-child(4) { background: var(--plum); height: 8.75rem; }
+    .shelf li:nth-child(5) { background: var(--ochre); height: 11rem; }
+
+    section { padding: 3rem 0; }
+    section + section { border-top: 1px solid var(--line); }
+
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); }
+    .card {
+      padding: 1.25rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+    }
+    .card h3 { margin-bottom: .5rem; }
+    .card p { margin-bottom: .75rem; }
+    .card ul { margin: 0; padding: 0; list-style: none; }
+    .card li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0 1rem;
+      padding: .35rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .card li span { color: var(--muted); font-size: .95rem; }
+
+    .schedule {
+      padding: 1.25rem;
+      background: var(--card);
+      border-left: .35rem solid var(--rust);
+      border-radius: .25rem;
+    }
+    .schedule ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+    .schedule p:last-child { margin-bottom: 0; }
+
+    .points { display: grid; gap: 1.25rem 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+    .points h3 { margin-bottom: .35rem; font-size: 1.125rem; }
+    .points p { margin: 0; color: var(--muted); }
+
+    .teachers { margin-top: 1.5rem; }
+    .teachers strong { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 1.125rem; }
+    .teachers p { margin: 0; color: var(--muted); }
+
+    .contacts { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+    .contacts a {
+      display: inline-block;
+      padding: .6rem 1.1rem;
+      border: 2px solid var(--green);
+      border-radius: .4rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contacts a:hover { background: var(--green); color: #fff; }
+
+    footer { padding: 1.5rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <!-- TODO: replace the text name with the logo file and confirm the business name. -->
+      <a class="brand" href="#top">Библиотека</a>
+      <nav aria-label="Разделы страницы">
+        <a href="#classes">Занятия</a>
+        <a href="#schedule">Расписание</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <h1>Занятия для детей на русском языке в Эдинбурге</h1>
+        <p class="lead">Поддержка и развитие русского языка через хобби, интересные занятия и общение. Под руководством опытных и увлечённых педагогов.</p>
+        <a class="button" href="#contacts">Связаться с нами</a>
+        <ul class="shelf">
+          <li>Русский</li>
+          <li>Арт</li>
+          <li>Книги</li>
+          <li>Театр</li>
+          <li>Математика</li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="classes">
+      <div class="wrap">
+        <h2>Занятия</h2>
+        <!-- TODO: confirm the current classes, including theatre and maths. -->
+        <div class="grid">
+          <article class="card">
+            <h3>1–3 года</h3>
+            <p>Играем, поём и знакомимся с русским языком вместе со взрослыми, открывая первые слова и фразы.</p>
+            <ul>
+              <li>Малыши с родителями <span>1 ч 30 мин</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>4–7 лет</h3>
+            <p>Погружение в русский язык через игру, сказки и творчество.</p>
+            <ul>
+              <li>Обучение чтению и письму <span>50 мин</span></li>
+              <li>Творческая мастерская <span>50 мин</span></li>
+              <li>Лесная школа <span>50 мин</span></li>
+              <li>Лаборатория сказок <span>50 мин</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>8–11 лет</h3>
+            <p>Развиваем речь, словарный запас и уверенность в русском языке в увлекательном формате, без учебников и зубрёжки.</p>
+            <ul>
+              <li>Книжный клуб <span>1 ч 30 мин</span></li>
+              <li>Творческая мастерская <span>50 мин</span></li>
+              <li>Лесная школа <span>50 мин</span></li>
+              <li>Лаборатория сказок <span>50 мин</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>12–16 лет</h3>
+            <p>Читаем и обсуждаем книги, развиваем речевую грамотность и умение выражать свои мысли.</p>
+            <ul>
+              <li>Книжный клуб <span>1 ч 30 мин</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="wrap">
+        <h2>Расписание</h2>
+        <!-- TODO: replace this notice with the real days, times and venue. -->
+        <div class="schedule">
+          <ul>
+            <li>Группы 1–3 года занимаются утром в будние дни.</li>
+            <li>Во время школьных каникул регулярных занятий нет, но могут проходить отдельные мероприятия и мастер-классы.</li>
+          </ul>
+          <p>Дни, время и место занятий уточняйте у нас: <a href="#contacts">контакты</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>О нас</h2>
+        <p>Мы — мамы и педагоги, живущие в Шотландии, и хорошо знаем, как сложно сохранить русский язык в англоязычной среде. Мы создали пространство, где дети и подростки встречаются и общаются на русском не через учебники и зубрёжку правил, а через интересные занятия: творчество, игры и обсуждения.</p>
+        <p>Мы верим, что билингвизм — это дар и ресурс для ребёнка. Поэтому создаём возможности для сохранения русского языка и его активного использования.</p>
+        <div class="points">
+          <div>
+            <h3>Профессиональные педагоги</h3>
+            <p>Учителя русского языка с профильным и педагогическим образованием и опытом работы с детьми.</p>
+          </div>
+          <div>
+            <h3>Живой язык</h3>
+            <p>Дети общаются с ровесниками, получают поддержку педагога и говорят по-русски, занимаясь тем, что им действительно интересно.</p>
+          </div>
+          <div>
+            <h3>Индивидуальный подход</h3>
+            <p>Благодаря небольшому размеру групп мы можем отслеживать уровень развития речи каждого ребёнка.</p>
+          </div>
+          <div>
+            <h3>Безопасность и ответственность</h3>
+            <p>Мы зарегистрированы в PVG Scheme и проходили подготовку по первой медицинской помощи детям.</p>
+          </div>
+        </div>
+        <h3 class="teachers">Педагоги</h3>
+        <div class="points teachers">
+          <div>
+            <strong>Евгения Дерябина</strong>
+            <p>Филолог, PhD, Новосибирский государственный университет</p>
+          </div>
+          <div>
+            <strong>Ольга Джонстон</strong>
+            <p>Учитель русского языка и литературы, МГГУ им. М. А. Шолохова</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="wrap">
+        <h2>Контакты</h2>
+        <!-- TODO: confirm these contact details for the new site. -->
+        <p>Напишите нам, чтобы узнать о свободных местах и записаться на занятия.</p>
+        <ul class="contacts">
+          <li><a href="https://wa.me/447988343668">WhatsApp</a></li>
+          <li><a href="https://t.me/bylingvo">Telegram</a></li>
+          <li><a href="https://www.instagram.com/biblioteka_edinburgh/">Instagram</a></li>
+          <li><a href="mailto:info.bylingvo@gmail.com">info.bylingvo@gmail.com</a></li>
+        </ul>
+        <p>Эдинбург, Великобритания</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Библиотека, Эдинбург</div>
+  </footer>
+</body>
+</html>

@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node, Astro and Cloudflare
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars*
+
+# Local environment files
+.env.*
+
+# Claude Code personal settings
+.claude/settings.local.json
