@@ -24,7 +24,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 ## Current status
 - The Cloudflare project is a Workers project named `biblioteka-portal`, and it builds from this repo. Do not press Retry on an old build: it redeploys that old commit.
 - The live site was last built from the one-page plain HTML version. The Astro site below has not been deployed yet.
-- Before the first Astro deploy, set the Cloudflare build command to `npm run build` and keep the deploy command `npx wrangler deploy`.
+- The build runs from `build.command` in `wrangler.jsonc`, so `npx wrangler deploy` builds the site itself. The Cloudflare dashboard needs no build command, and its settings page did not show that field.
 - All 7 pages exist in `src/pages/`, with shared layout in `src/layouts/Base.astro`, styles in `src/styles/global.css`, and class data in `src/data/classes.js`.
 - Pages with no real content yet show a dashed placeholder block and a `TODO:` comment in the source: the schedule's days, times and venue, plus Библиотека, Взрослым and Мероприятия.
 - The logo is the БЫ lingvo logo, saved as `public/logo.jpg` (original in `figures_archive/logos/`). It is only 150x150px, so it is shown small.
