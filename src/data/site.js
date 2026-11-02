@@ -12,7 +12,7 @@ export const contacts = [
   { href: 'https://t.me/bylingvo', label: 'Telegram' },
   { href: 'https://www.instagram.com/biblioteka_edinburgh/', label: 'Instagram' },
   { href: 'https://www.facebook.com/p/edinbook-61589214084542/', label: 'Facebook' },
-  { href: 'mailto:info.bylingvo@gmail.com', label: 'info.bylingvo@gmail.com' },
+  { href: 'mailto:biblioteka.edinburgh@gmail.com', label: 'biblioteka.edinburgh@gmail.com' },
 ];
 
 // Icon shapes: Simple Icons (CC0).

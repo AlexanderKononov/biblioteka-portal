@@ -19,7 +19,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 - Do not copy photos from Instagram or Tilda. We reuse only the logo and event covers cleared one by one, kept in `public/events/`.
 - Do not collect or show parent or child details, so the site has no forms.
 - The structure follows https://abracadabra-online.com/ (structure only, none of its text or photos), with these pages: Главная, Занятия, Расписание, Библиотека, Взрослым, Мероприятия, О нас.
-- The design follows the same layout: a top bar with round social icons, a bold hero, yellow buttons, a coloured section of white cards and a yellow FAQ. It uses its own colours, set as variables at the top of `src/styles/global.css`, and PT Sans, self-hosted through `@fontsource/pt-sans` so visitors make no requests to Google.
+- The design follows the same layout: a top bar with round social icons, a bold hero, sage buttons, a coloured section of white cards and a sage FAQ. Its colours come from a five-colour palette (sage, dusty blue, mustard, terracotta, dark aubergine), set as variables at the top of `src/styles/global.css`, and PT Sans, self-hosted through `@fontsource/pt-sans` so visitors make no requests to Google.
 
 ## Current status
 - The Cloudflare project is a Workers project named `biblioteka-portal`, and it builds from this repo. Do not press Retry on an old build: it redeploys that old commit.
