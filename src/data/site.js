@@ -11,15 +11,15 @@ export const contacts = [
   { href: 'https://wa.me/447988343668', label: 'WhatsApp' },
   { href: 'https://t.me/bylingvo', label: 'Telegram' },
   { href: 'https://www.instagram.com/biblioteka_edinburgh/', label: 'Instagram' },
+  { href: 'https://www.facebook.com/p/edinbook-61589214084542/', label: 'Facebook' },
   { href: 'mailto:info.bylingvo@gmail.com', label: 'info.bylingvo@gmail.com' },
 ];
 
-// TODO: add the Facebook page address. Until then the icon shows but is not a link.
 // Icon shapes: Simple Icons (CC0).
 export const socials = [
   {
     label: 'Facebook',
-    href: null,
+    href: 'https://www.facebook.com/p/edinbook-61589214084542/',
     path: 'M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245Z',
   },
   {

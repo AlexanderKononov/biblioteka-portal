@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Placeholder from '../components/Placeholder.astro';
-import { groups, holidayNote } from '../data/classes.js';
+import { groups, holidays } from '../data/classes.js';
 ---
 <Base title="Расписание" description="Расписание занятий на русском языке для детей и подростков в Эдинбурге.">
   <div class="page-head">
@@ -14,21 +13,22 @@ import { groups, holidayNote } from '../data/classes.js';
   <section id="timetable">
     <div class="wrap">
       <h2>Занятия</h2>
-      <!-- TODO: add the real days and times, or replace these tables with a Google Calendar embed. -->
       <div>
         {groups.map((group) => (
           <table class="timetable">
             <caption>{group.age}</caption>
             <thead>
-              <tr><th scope="col">Занятие</th><th scope="col">Длительность</th><th scope="col">День и время</th></tr>
+              <tr><th scope="col">Занятие</th><th scope="col">Кто ведёт</th><th scope="col">День и время</th></tr>
             </thead>
             <tbody>
-              {group.classes.map((item) => (
-                <tr>
-                  <td>{item.name}</td>
-                  <td>{item.duration}</td>
-                  <td class={item.when ? undefined : 'pending'}>{item.when ?? 'Уточняется'}</td>
-                </tr>
+              {group.classes.filter((item) => item.when).map((item) => (
+                item.when.map((slot, index) => (
+                  <tr>
+                    {index === 0 && <td rowspan={item.when.length}>{item.name}</td>}
+                    <td>{slot.teacher}</td>
+                    <td>{slot.time}</td>
+                  </tr>
+                ))
               ))}
             </tbody>
           </table>
@@ -40,9 +40,8 @@ import { groups, holidayNote } from '../data/classes.js';
   <section id="place">
     <div class="wrap">
       <h2>Место</h2>
-      <!-- TODO: add the venue address. -->
       <div>
-        <Placeholder>Адрес появится здесь. Пока уточняйте его у нас: <a href="/o-nas/#contacts">контакты</a>.</Placeholder>
+        <p class="note">25 Palmerston Pl, Edinburgh EH12 5AP<br />BIBLIOTEKA - Classes and Books in Russian</p>
       </div>
     </div>
   </section>
@@ -51,7 +50,13 @@ import { groups, holidayNote } from '../data/classes.js';
     <div class="wrap">
       <h2>Каникулы</h2>
       <div>
-        <p class="note">{holidayNote}</p>
+        <p>Школа не работает по обычному расписанию во время каникул:</p>
+        <ul class="class-list">
+          {holidays.map((holiday) => (
+            <li><strong>{holiday.name}</strong> {holiday.dates}</li>
+          ))}
+        </ul>
+        <p class="note">На время каникул действует особое расписание занятий и мероприятий.</p>
       </div>
     </div>
   </section>
