@@ -33,7 +33,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 | Page | Path | Content | Status |
 |---|---|---|---|
 | Главная | `/` | Hero, section cards, upcoming events, FAQ, contacts | Done; events are a placeholder, FAQ needs review |
-| Занятия | `/zanyatiya/` | Age groups, classes, duration, price | Done from Tilda; prices need confirming |
+| Занятия | `/zanyatiya/` | Age groups, classes, duration, price | Done; text and prices supplied directly, replacing Tilda's |
 | Расписание | `/raspisanie/` | Tables by group, venue, holidays | Days, times and venue are placeholders |
 | Библиотека | `/biblioteka/` | About, loan rules, where and when, catalogue | All placeholders |
 | Взрослым | `/vzroslym/` | Adult classes | All placeholders |
@@ -60,8 +60,6 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 - Adults: which classes, on which days, at what price?
 - Events: what is planned, with dates? Should past events be shown?
 - Who teaches now? The Tilda site also has a bio with no name attached (a PhD on Russian-Italian bilingualism).
-- Are the prices current, and should the site show them? Tilda lists £20 per 4 classes for ages 1-3 and £60 for the other groups.
-- Is the 1-3 class called "Игровые встречи" (Tilda) or "Малыши с родителями" (the earlier one-page version)?
 - How do parents sign up: WhatsApp, Telegram and email links, or the existing Google Form? The form collects child and parent details, so keeping it means moving the privacy policy too.
 - Do we already own the domain? If so, where is it registered?
 - What is the Facebook page address? The header icon is not a link until we have it (`socials` in `src/data/site.js`).

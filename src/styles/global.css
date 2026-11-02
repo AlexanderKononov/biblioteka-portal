@@ -176,12 +176,13 @@ section + section:not(.band) { border-top: 1px solid var(--line); }
 .group { margin-bottom: 1.5rem; padding: 1.5rem; border: 1px solid var(--line); border-top: .4rem solid var(--sun); scroll-margin-top: 1rem; }
 .group:last-child { margin-bottom: 0; }
 .group h3 { font-size: 1.5rem; margin-bottom: .5rem; }
-.group .intro { color: var(--muted); }
 .class-list { margin: 0 0 1rem; padding: 0; list-style: none; }
 .class-list li { padding: .75rem 0; border-top: 1px solid var(--line); }
 .class-row { display: flex; justify-content: space-between; gap: 1rem; }
 .class-row span { flex: none; color: var(--muted); font-size: .9375rem; }
 .class-list p { margin: .25rem 0 0; color: var(--muted); }
+.class-list .topics { margin: .5rem 0 0; padding-left: 1.25rem; list-style: disc; color: var(--muted); }
+.class-list .topics li { padding: .125rem 0; border-top: 0; }
 .group-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; }
 .group-foot p { margin: 0; font-weight: 700; }
 .group-foot .button { padding: .5rem 1.25rem; font-size: .9375rem; }

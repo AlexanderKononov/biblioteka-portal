@@ -6,25 +6,28 @@ import { groups, holidayNote } from '../data/classes.js';
   <div class="page-head">
     <div class="wrap">
       <h1>Занятия</h1>
-      <p class="lead">Небольшие группы для билингвальных детей и подростков от 1 до 16 лет.</p>
+      <p class="lead">Небольшие группы для детей-билингвов и детей экспатов для людей от 1,6 до 16 лет.</p>
     </div>
   </div>
 
   <section id="groups">
     <div class="wrap">
       <h2>Группы</h2>
-      <!-- TODO: confirm the current classes and prices. The 1–3 group's name and £20 price come from Tilda and differ from the other groups. -->
       <div>
         {groups.map((group) => (
           <article class="group" id={group.id}>
             <h3>{group.age}</h3>
             <div>
-              <p class="intro">{group.intro}</p>
               <ul class="class-list">
                 {group.classes.map((item) => (
                   <li>
                     <div class="class-row"><strong>{item.name}</strong> <span>{item.duration}</span></div>
-                    <p>{item.text}</p>
+                    {item.text && <p>{item.text}</p>}
+                    {item.topics && (
+                      <ul class="topics">
+                        {item.topics.map((topic) => <li>{topic}</li>)}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>
