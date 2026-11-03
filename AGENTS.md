@@ -7,7 +7,7 @@ Static business website replacing a Tilda site. [README.md](README.md) holds the
 - **Static only.** The output is files served by Cloudflare. Cover dynamic needs with the services listed in the README. If a request seems to need a server or database, raise it with the user before building.
 - **Light by default.** Build with HTML and CSS. Add JavaScript or a dependency only when a feature needs it.
 - **Real business facts.** Hours, prices, addresses, phone numbers and names come from the user, the Tilda site or the Instagram account linked in the README. Mark anything missing with `TODO:` and list those gaps when you report back.
-- **Logo only.** The logo is the only image taken from Instagram or Tilda, apart from event covers the user has cleared one by one. Anything committed stays in the public git history even after deletion.
+- **Logo only.** The logo is the only image taken from Instagram or Tilda, apart from event covers and teacher photos the user has cleared one by one. Anything committed stays in the public git history even after deletion.
 - **Russian site.** Write all visitor-facing text in Russian, set `lang="ru"`, and choose fonts that include Cyrillic.
 - **No personal data.** The site has no forms. Parents get in touch through the published contact details.
 - **Public by default.** The GitHub repo and the built site are both public. Commit only what is safe to publish, and keep credentials and customer data out.

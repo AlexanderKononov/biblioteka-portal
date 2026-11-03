@@ -14,7 +14,8 @@ import Placeholder from '../components/Placeholder.astro';
     <div class="wrap">
       <h2>О библиотеке</h2>
       <!-- TODO: describe the library: who can use it. -->
-      <div>
+      <div class="library-about">
+        <img src="/library/chital-nyy-ugolok.jpg" alt="Стеллажи с книгами на русском языке и синее кресло с яркой подушкой." width="960" height="1280" />
         <ul class="stats">
           <li><strong>39</strong> <span>читательских билетов</span></li>
           <li><strong>330</strong> <span>книг в каталоге</span></li>
@@ -30,6 +31,8 @@ import Placeholder from '../components/Placeholder.astro';
       <div>
         <p>Библиотека является бесплатной. Донаты приветствуются и идут на покупку новых книг и аренду помещения.</p>
         <p>Одновременно и сроком на один месяц можно взять три взрослых и три детских книги.</p>
+        <h3>Регистрация</h3>
+        <p>Для регистрации в библиотеке нужны фамилия и имя, номер телефона. Мы выдадим вам номер абонемента. Получить его можно в библиотеке лично или <a href="/o-nas/#contacts">написав нам в мессенджер</a>.</p>
         <h3>Возврат книг</h3>
         <ul>
           <li>Книги нужно возвращать вовремя.</li>
@@ -46,6 +49,8 @@ import Placeholder from '../components/Placeholder.astro';
         </ul>
         <p>Помните, что за вами стоят другие читатели. На популярные книги может быть очередь: пожалуйста, соблюдайте сроки.</p>
         <p>Эта библиотека работает на доверии. Если вы берёте книгу, вы берёте на себя ответственность за чужую вещь.</p>
+        <h3>Если книга потеряна или испорчена</h3>
+        <p>Если вы потеряли книгу или вернули её в плохом состоянии (пятна, порванные страницы и т.п.), возможна замена книги на аналогичную по рыночной стоимости + доставка или компенсация (около £20). Каждый случай обсуждается индивидуально. Если вы отказываетесь от замены или компенсации, доступ к библиотеке закрывается (бан).</p>
         <h3>Можно и нужно участвовать в жизни библиотеки</h3>
         <ul>
           <li>Дарить книги библиотеке.</li>
@@ -70,7 +75,11 @@ import Placeholder from '../components/Placeholder.astro';
     <div class="wrap">
       <h2>Каталог</h2>
       <div>
-        <p><a class="button" href="https://docs.google.com/spreadsheets/d/1msw4LwLgIcYeCmqpgrUZt5q8LZCykFTrOT2IcIf7efA/edit">Открыть каталог книг</a></p>
+        <div class="photo-pair">
+          <img src="/library/polki-proza-klassika.jpg" alt="Книжные полки с подписями «Современная проза» и «Классика»." width="960" height="1280" loading="lazy" />
+          <img src="/library/polki-detektivy-zarubezhnaya.jpg" alt="Книжные полки с подписями «Детективы» и «Зарубежная проза»." width="960" height="1280" loading="lazy" />
+        </div>
+        <p class="center"><a class="button" href="https://docs.google.com/spreadsheets/d/1msw4LwLgIcYeCmqpgrUZt5q8LZCykFTrOT2IcIf7efA/edit">Открыть каталог книг</a></p>
       </div>
     </div>
   </section>

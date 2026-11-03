@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import ContactList from '../components/ContactList.astro';
-import Placeholder from '../components/Placeholder.astro';
 import { groups, holidayNote } from '../data/classes.js';
 
 const classTypes = new Set(groups.flatMap((group) => group.classes.map((item) => item.name))).size;
@@ -117,9 +116,14 @@ const sections = [
   <section id="events">
     <div class="wrap">
       <h2>Ближайшие мероприятия</h2>
-      <!-- TODO: add upcoming events with their dates. -->
       <div>
-        <Placeholder>Ближайшие мероприятия скоро появятся здесь.</Placeholder>
+        <article class="event">
+          <div>
+            <h3>Лекция-дискуссия «Культы и психология манипуляции»</h3>
+            <p><strong>Воскресенье, 8 ноября 2026, 15:00–17:00</strong><br />25 Palmerston Place, Edinburgh EH12 5AP<br />Вход бесплатный</p>
+            <p>Лекцию читает Екатерина Стрельникова, клинический психолог. <a href="/meropriyatiya/#upcoming">Подробнее о лекции</a></p>
+          </div>
+        </article>
         <p class="center"><a class="button" href="/meropriyatiya/">Все мероприятия</a></p>
       </div>
     </div>
