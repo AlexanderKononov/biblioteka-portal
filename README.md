@@ -33,7 +33,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 | Page | Path | Content | Status |
 |---|---|---|---|
 | Главная | `/` | Hero, section cards, upcoming events, FAQ, contacts | Done; upcoming events show a short note until the next event is announced, FAQ needs review |
-| Занятия | `/zanyatiya/` | Age groups, classes, duration, price | Done; text and prices supplied directly, replacing Tilda's |
+| Занятия | `/zanyatiya/` | Age groups, online classes, duration, price | Done; text and prices supplied directly, replacing Tilda's. Online classes are `onlineGroup` in `src/data/classes.js`, kept out of the home page counts and the schedule |
 | Расписание | `/raspisanie/` | Tables by group, venue, holidays | Done; classes with no days and times yet are left out |
 | Библиотека | `/biblioteka/` | About, loan rules, where and when, catalogue | Photos (`public/library/`), numbers, loan rules, FAQ and a link to the Google Sheets catalogue done; where and when is a placeholder |
 | Взрослым | `/vzroslym/` | Book club, adult classes, hosting events | Book club «Литературный Эдинбург» done with six photos with no recognisable faces (`public/adults/`) and a call to host adult events in the library, but its meeting time, place, price and how to join are missing; adult classes are a placeholder |

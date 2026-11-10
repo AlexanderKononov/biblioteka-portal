@@ -81,6 +81,9 @@ span.social { opacity: .45; }
 .page-head h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin-bottom: .75rem; }
 .page-head .lead { font-size: 1.1875rem; max-width: 40rem; margin: 0 auto; }
 .page-head .lead + .lead { margin-top: 1rem; }
+.page-head .students { max-width: 40rem; margin: 1.5rem auto 0; text-align: left; }
+.students p { margin-bottom: .5rem; }
+.students ul { margin: 0; padding-left: 1.25rem; }
 .page-head a:hover { color: var(--sage); }
 
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 4rem; padding: 1.5rem 0; }

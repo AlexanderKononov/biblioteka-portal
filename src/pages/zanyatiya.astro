@@ -1,12 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
-import { groups, holidayNote } from '../data/classes.js';
+import { groups, onlineGroup, holidayNote } from '../data/classes.js';
 ---
 <Base title="Занятия" description="Занятия на русском языке для детей и подростков от 1 до 16 лет в Эдинбурге: группы, длительность и стоимость.">
   <div class="page-head">
     <div class="wrap">
       <h1>Занятия</h1>
-      <p class="lead">Небольшие группы для детей-билингвов и детей экспатов для людей от 1,6 до 16 лет.</p>
+      <p class="lead">Небольшие группы для детей-билингвов и детей-экспатов от 1,6 до 16 лет.</p>
+      <div class="students">
+        <p>Наши ученики:</p>
+        <ul>
+          <li>дети из двуязычных семей, где один из родителей является русскоговорящим;</li>
+          <li>дети экспатов, для которых русский язык является родным или одним из родных языков и которые длительное время находились в русскоязычной среде.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -14,14 +21,15 @@ import { groups, holidayNote } from '../data/classes.js';
     <div class="wrap">
       <h2>Группы</h2>
       <div>
-        {groups.map((group) => (
+        {[...groups, onlineGroup].map((group) => (
           <article class="group" id={group.id}>
             <h3>{group.age}</h3>
             <div>
+              {group.note && <p>{group.note}</p>}
               <ul class="class-list">
                 {group.classes.map((item) => (
                   <li>
-                    <div class="class-row"><strong>{item.name}</strong> <span>{item.duration}</span></div>
+                    <div class="class-row"><strong>{item.name}</strong> {(item.duration || item.ages) && <span>{item.duration || item.ages}</span>}</div>
                     {item.text && <p>{item.text}</p>}
                     {item.topics && (
                       <ul class="topics">
