@@ -265,7 +265,7 @@ footer nav, .footer-contacts { display: flex; flex-wrap: wrap; gap: .25rem 1.25r
 @media (min-width: 48rem) {
   .library-about { grid-template-columns: 3fr 2fr; gap: 3rem; align-items: center; }
   .library-about .stats { grid-template-columns: 1fr; }
-  .teachers { grid-template-columns: repeat(3, 1fr); max-width: none; }
+  .teachers { grid-template-columns: repeat(2, 1fr); max-width: none; }
   .event:has(img) { grid-template-columns: 16rem 1fr; }
   .photo-grid { grid-template-columns: repeat(3, 1fr); }
   .hero { padding: 6rem 0; }
@@ -278,6 +278,7 @@ footer nav, .footer-contacts { display: flex; flex-wrap: wrap; gap: .25rem 1.25r
 }
 
 @media (min-width: 60rem) {
+  .teachers { grid-template-columns: repeat(4, 1fr); }
   .cards { grid-template-columns: repeat(3, 1fr); }
 }
 

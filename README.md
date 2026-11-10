@@ -38,7 +38,7 @@ The business is Biblioteka, a library offering children's classes in Edinburgh, 
 | Библиотека | `/biblioteka/` | About, loan rules, where and when, catalogue | Photos (`public/library/`), numbers, loan rules, FAQ and a link to the Google Sheets catalogue done; where and when is a placeholder |
 | Взрослым | `/vzroslym/` | Book club, adult classes, hosting events | Book club «Литературный Эдинбург» done with six photos with no recognisable faces (`public/adults/`) and a call to host adult events in the library, but its meeting time, place, price and how to join are missing; adult classes are a placeholder |
 | Мероприятия | `/meropriyatiya/` | Upcoming and past events | No upcoming events yet (placeholder); three past events, newest first: the cults lecture on 8 November 2026, the biologist lecture and the toy swap |
-| О нас | `/o-nas/` | Story, approach, teachers, contacts | Done; three teachers for now, more to come |
+| О нас | `/o-nas/` | Story, approach, teachers, contacts | Done; four people for now (three teachers and Алёна, the library manager), more to come |
 
 ## Planned free services
 - Schedule display: tables on the site, or an embedded Google Calendar if someone without git access updates the schedule
