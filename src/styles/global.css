@@ -242,6 +242,7 @@ section > .wrap > .lead { max-width: 40rem; margin: -1rem auto 2.25rem; text-ali
   text-decoration: none;
 }
 .contacts a::after { content: "→"; color: var(--muted); }
+.contacts small { display: block; color: var(--muted); font-size: .9375rem; }
 .contacts a:hover::after { color: var(--accent); }
 .place { color: var(--muted); margin: 0; }
 
@@ -279,7 +280,7 @@ footer nav, .footer-contacts { display: flex; flex-wrap: wrap; gap: .25rem 1.25r
   .page-head { padding: 4.5rem 0; }
   section { padding: 5rem 0; }
   .intro-grid { grid-template-columns: 3fr 2fr; gap: 4rem; }
-  .stats { grid-template-columns: repeat(3, 1fr); }
+  .stats { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .points { grid-template-columns: 1fr 1fr; }
 }

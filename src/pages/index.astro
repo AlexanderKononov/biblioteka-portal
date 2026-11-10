@@ -6,9 +6,10 @@ import { groups, holidayNote } from '../data/classes.js';
 const classTypes = new Set(groups.flatMap((group) => group.classes.map((item) => item.name))).size;
 
 const stats = [
+  { value: '500+', label: 'учеников у наших педагогов' },
   { value: groups.length, label: 'возрастные группы' },
   { value: classTypes, label: 'видов занятий' },
-  { value: '1–16', label: 'лет — возраст детей и подростков' },
+  { value: 2, label: 'формата занятий — офлайн и онлайн' },
 ];
 
 const sections = [
@@ -51,12 +52,12 @@ const sections = [
   },
 ];
 ---
-<Base description="Поддержка и развитие русского языка через хобби, интересные занятия и общение. Группы для детей от 1 до 16 лет в Эдинбурге.">
+<Base description="Образовательное пространство в Эдинбурге и онлайн: уроки русского и на русском, хобби и общение. А ещё библиотека для детей и взрослых.">
   <!-- TODO: add our own hero photo here, with parents' consent. Photos from Instagram or Tilda can't be used. -->
   <div class="hero">
     <div class="wrap">
-      <h1>Занятия для детей на русском языке <em>в&nbsp;Эдинбурге</em></h1>
-      <p class="lead">Поддержка и развитие русского языка через хобби, интересные занятия и общение.</p>
+      <h1>Образовательное пространство <em>в&nbsp;Эдинбурге (и&nbsp;онлайн)</em></h1>
+      <p class="lead">Для уроков русского и на русском, для реализации своих идей и хобби, и для общения. А ещё библиотека для детей и взрослых.</p>
     </div>
   </div>
   <div class="wrap actions">
@@ -147,7 +148,7 @@ const sections = [
         </details>
         <details>
           <summary>Где проходят занятия?</summary>
-          <p>В Эдинбурге. Точное место занятий уточняйте у нас.</p>
+          <p>Офлайн-занятия проводятся по адресу: 25 Palmerston Pl, Edinburgh EH12 5AP, BIBLIOTEKA - Classes and Books in Russian. Онлайн-занятия проходят в Zoom.</p>
         </details>
         <details>
           <summary>Как записаться?</summary>

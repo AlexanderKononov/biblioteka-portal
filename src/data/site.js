@@ -8,6 +8,7 @@ export const nav = [
 ];
 
 export const contacts = [
+  { href: 'https://www.google.com/maps/search/?api=1&query=25+Palmerston+Pl%2C+Edinburgh+EH12+5AP', label: '25 Palmerston Pl, Edinburgh EH12 5AP', note: 'BIBLIOTEKA - Classes and Books in Russian' },
   { href: 'https://wa.me/447988343668', label: 'WhatsApp' },
   { href: 'https://t.me/bylingvo', label: 'Telegram' },
   { href: 'https://www.instagram.com/biblioteka_edinburgh/', label: 'Instagram' },
